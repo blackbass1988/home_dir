@@ -17,7 +17,7 @@ set background=dark
 filetype off
 
 
-"Перед сохранением вырезаем пробелы на концах (только в .py файлах)
+"Перед сохранением вырезаем пробелы на концах (только  .py файлах)
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 "В .py файлах включаем умные отступы после ключевых слов
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
@@ -64,7 +64,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle' 
 
 " Тестирую
-Bundle 'Lokaltog/vim-easymotion'
 
 " Проверенные
 Bundle 'vim-stylus'
@@ -73,4 +72,6 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'jade.vim'
 " :help fugitive
 Bundle 'tpope/vim-fugitive'
+" <Leader><Leader>w
+Bundle 'Lokaltog/vim-easymotion'
 filetype plugin indent on 
