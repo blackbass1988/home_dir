@@ -61,10 +61,11 @@ Bundle 'gmarik/vundle'
 
 " Тестирую
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " Проверенные
 Bundle 'vim-stylus'
+" <c-e>
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'jade.vim'
 " :help fugitive
 Bundle 'tpope/vim-fugitive'
