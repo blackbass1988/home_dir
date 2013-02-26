@@ -60,12 +60,12 @@ call vundle#rc()
 Bundle 'gmarik/vundle' 
 
 " Тестирую
-Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " Проверенные
 Bundle 'vim-stylus'
 Bundle 'jade.vim'
-
+" :help fugitive
+Bundle 'tpope/vim-fugitive'
 filetype plugin indent on 
