@@ -6,10 +6,6 @@ set expandtab "Ставим табы пробелами
 set softtabstop=4 "4 пробела в табе
 "Автоотступ
 set autoindent
-"Подсвечиваем все что можно подсвечивать
-let python_highlight_all = 1
-"Включаем 256 цветов в терминале, мы ведь работаем из иксов?
-"Нужно во многих терминалах, например в gnome-terminal
 set t_Co=256
 
 set number
@@ -17,51 +13,15 @@ set number
 set noswapfile
 set nocompatible
 set background=dark
-"colorscheme elflord
 
-filetype on
-filetype plugin on
+filetype off
 
-
-
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-
-
-
-"Авто комплит по табу
-function InsertTabWrapper()
-let col = col('.') - 1
-if !col || getline('.')[col - 1] !~ '\k'
-return "\"
-else
-return "\<c-p>"
-endif
-endfunction
-imap <c-r>=InsertTabWrapper()"Показываем все полезные опции автокомплита сразу
-set complete=""
-set complete+=.
-set complete+=k
-set complete+=b
-set complete+=t
 
 "Перед сохранением вырезаем пробелы на концах (только в .py файлах)
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 "В .py файлах включаем умные отступы после ключевых слов
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 
-""""Дальше мои личные настройки, 
-""""в принципе довольно обычные, может кому надо
-
-"Вызываем SnippletsEmu(см. дальше в топике) по ctrl-j
-"вместо tab по умолчанию (на табе автокомплит)
-let g:snippetsEmu_key = "<C-j>"
-
-" Копи/паст по Ctrl+C/Ctrl+V
-vmap <C-C> "+yi
-imap <C-V> "+gPi
 
 colorscheme wombat256 "Цветовая схема
 syntax on "Включить подсветку синтаксиса
@@ -88,3 +48,24 @@ set noswapfile
 set encoding=utf-8 " Кодировка файлов по умолчанию
 set fileencodings=utf8,cp1251 " Возможные кодировки файлов, если файл не в unicode кодировке,
 " то будет использоваться cp1251
+
+syntax on
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+
+
+" База, нужно
+Bundle 'gmarik/vundle' 
+
+" Тестирую
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+" Проверенные
+Bundle 'vim-stylus'
+Bundle 'jade.vim'
+
+filetype plugin indent on 
