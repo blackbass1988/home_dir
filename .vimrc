@@ -64,7 +64,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle' 
 
 " Тестирую
-
+" Bundle 'tomtom/checksyntax_vim'
+Bundle 'scrooloose/syntastic'
 " Проверенные
 Bundle 'vim-stylus'
 " <c-e>
@@ -75,3 +76,4 @@ Bundle 'tpope/vim-fugitive'
 " <Leader><Leader>w
 Bundle 'Lokaltog/vim-easymotion'
 filetype plugin indent on 
+
