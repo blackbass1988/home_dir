@@ -64,7 +64,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle' 
 
 " Тестирую
-Bundle 'node.js'
 Bundle 'tpope/vim-markdown'
 " Bundle 'tomtom/checksyntax_vim'
 Bundle 'scrooloose/syntastic'
