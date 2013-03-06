@@ -69,6 +69,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'scrooloose/syntastic'
 " Проверенные
 Bundle 'vim-stylus'
+Bundle 'kchmck/vim-coffee-script'
 " <c-e>
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'jade.vim'
