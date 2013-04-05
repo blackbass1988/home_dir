@@ -16,7 +16,6 @@ set background=dark
 
 filetype off
 
-
 "Перед сохранением вырезаем пробелы на концах (только  .py файлах)
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 "В .py файлах включаем умные отступы после ключевых слов
@@ -48,8 +47,7 @@ set noswapfile
 set encoding=utf-8 " Кодировка файлов по умолчанию
 set fileencodings=utf8,cp1251 " Возможные кодировки файлов, если файл не в unicode кодировке,
 " то будет использоваться cp1251
-
-
+set clipboard=unnamedplus
 " =============================================
 "                   Vundle start
 " =============================================
