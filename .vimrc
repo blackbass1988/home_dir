@@ -77,5 +77,8 @@ Bundle 'jade.vim'
 Bundle 'tpope/vim-fugitive'
 " <Leader><Leader>w
 Bundle 'Lokaltog/vim-easymotion'
+" vim cmds in russian layout
+Bundle 'powerman/vim-plugin-ruscmd'
+
 filetype plugin indent on 
 
