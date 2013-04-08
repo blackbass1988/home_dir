@@ -78,5 +78,8 @@ Bundle 'Lokaltog/vim-easymotion'
 " vim cmds in russian layout
 Bundle 'powerman/vim-plugin-ruscmd'
 
+" file finding
+Bundle 'wincent/Command-T'
+
 filetype plugin indent on 
 
