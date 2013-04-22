@@ -78,6 +78,9 @@ Bundle 'Lokaltog/vim-easymotion'
 " vim cmds in russian layout
 Bundle 'powerman/vim-plugin-ruscmd'
 
+Bundle "Chiel92/vim-autoformat"
+noremap <F7> :Autoformat<CR><CR>
+
 " file finding
 Bundle 'wincent/Command-T'
 
