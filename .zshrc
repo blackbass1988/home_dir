@@ -44,4 +44,5 @@ plugins=(git debian screen colorize svn)
 
 source $ZSH/oh-my-zsh.sh
 
+export PATH=$PATH:/home/salionov/pear/bin
 # Customize to your needs...
