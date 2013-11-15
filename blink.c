@@ -90,7 +90,7 @@ ISR(INT0_vect)
     for (uint16_t i =0 ; i<40000; i++) {
         BEEP2(1000);
         SILENCE(1000);
-        BEEP(1000, i);
+        //BEEP(1000, i);
     }
     delay_time = rand() % 5000 + 100;
    
