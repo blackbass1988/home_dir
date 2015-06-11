@@ -46,3 +46,5 @@ set number
 set background=dark
 colorscheme jellybeans
 set backspace=2
+set encoding=utf8
+set fileencodings=utf8,cp1251
