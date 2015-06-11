@@ -19,7 +19,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'ctrlp.vim'
 Bundle 'fatih/vim-go'
-Bundle 'YouCompleteMe'
+Bundle 'Valloric/YouCompleteMe'
 Plugin 'autoclose'
 Plugin 'bling/vim-bufferline'
 " themes 
