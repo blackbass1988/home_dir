@@ -10,7 +10,7 @@ void BEEP2(int time);
 void SILENCE(uint16_t time);
 void BLINK();
 
-void delay_ms(uint16_t xms)
+void delay_ms(int xms)
 {
     while(xms){
         _delay_ms(0.96);
@@ -18,10 +18,10 @@ void delay_ms(uint16_t xms)
     }
 }
 
-void delay_us(uint16_t xms)
+void delay_us(int xms)
 {
     while (xms) {
-        _delay_us(0.25);
+        _delay_us(0.096);
         xms--;
     }
 }
@@ -30,7 +30,8 @@ ISR(INT0_vect)
 {
 
     delay_time = 0;
-/*    BEEP(200, 100);
+   /* 
+    BEEP(200, 100);
     SILENCE(200);
     BEEP(200, 500);
     BEEP(200, 100);
@@ -86,13 +87,20 @@ ISR(INT0_vect)
     BEEP(200, 1000);
     BEEP(200, 500);
 */
-    
-    for (uint16_t i =0 ; i<40000; i++) {
-        BEEP2(1000);
-        SILENCE(1000);
-        //BEEP(1000, i);
+    uint16_t i =0;
+    uint16_t freq = 0;
+    uint16_t time = 0;
+    for ( i =10 ; i<25000; i++) {
+        //BEEP2(255);
+        freq = rand() % 10000 +i;
+        time = rand() % 10 + 30;
+        if (freq > 100000) {
+            freq = freq/100;
+        }
+        BEEP(time , freq);
+        SILENCE( rand() % 100);
     }
-    delay_time = rand() % 5000 + 100;
+    delay_time = rand() % 5000 + 10000;
    
 }
 
@@ -105,15 +113,16 @@ void BLINK()
 }
 
 void SILENCE(uint16_t time){
-    for (uint16_t i=0; i< time; i++) {
+    uint16_t i = 0;
+    for (i=0; i< time; i++) {
         delay_us(1000);
     }
 }
 
 void BEEP(uint16_t time, uint16_t freq)
 {
-
-    for (uint16_t i = 0; i< time; i++) {
+    uint16_t i = 0;
+    for (i = 0; i< time; i++) {
         PORTD |= _BV(PD7);
         delay_us(freq);
         PORTD &= ~_BV(PD7);
@@ -123,11 +132,12 @@ void BEEP(uint16_t time, uint16_t freq)
 
 void BEEP2(int time)
 {
-    for (int i = 0; i< time; i++) {
+    int i =0;
+    for (i = 0; i< time; i++) {
         PORTD |= _BV(PD7);
-        _delay_us(2200);
+        delay_ms(2);
         PORTD &= ~_BV(PD7);
-        _delay_us(2200);
+        delay_ms(2);
     }
 }
 

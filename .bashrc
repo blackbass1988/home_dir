@@ -89,3 +89,10 @@ if [ -x /usr/lib/command-not-found ]; then
 	}
 fi
 
+[[ -s "/home/salionov/.gvm/scripts/gvm" ]] && source "/home/salionov/.gvm/scripts/gvm"
+
+export NVM_DIR="/home/salionov/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/home/salionov/.gvm/bin/gvm-init.sh" ]] && source "/home/salionov/.gvm/bin/gvm-init.sh"
