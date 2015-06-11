@@ -17,11 +17,11 @@ call vundle#begin()
 " База, нужно
 Bundle 'gmarik/vundle' 
 
-Bundle 'Command-T'
+Bundle 'ctrlp.vim'
 Bundle 'fatih/vim-go'
 Bundle 'YouCompleteMe'
 Plugin 'autoclose'
-
+Plugin 'bling/vim-bufferline'
 " themes 
 Bundle 'badwolf'
 Bundle 'nanotech/jellybeans.vim'
