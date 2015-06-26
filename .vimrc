@@ -22,6 +22,8 @@ Bundle 'fatih/vim-go'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'autoclose'
 Plugin 'bling/vim-bufferline'
+Plugin 'tpope/vim-fugitive'
+
 " themes 
 Bundle 'badwolf'
 Bundle 'nanotech/jellybeans.vim'
