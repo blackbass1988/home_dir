@@ -26,6 +26,8 @@ Plugin 'tpope/vim-fugitive'
 
 " themes 
 Bundle 'badwolf'
+Bundle 'zenburn'
+Bundle 'antlypls/vim-colors-codeschool'
 Bundle 'nanotech/jellybeans.vim'
 
 
@@ -46,7 +48,7 @@ set t_Co=256
 set number
 
 set background=dark
-colorscheme jellybeans
+colorscheme badwolf
 set backspace=2
 set encoding=utf8
 set fileencodings=utf8,cp1251
